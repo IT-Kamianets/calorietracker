@@ -1,1 +1,37 @@
-hello world!!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="globalTitle">Calorie Tracker</h1>
+        
+        <input 
+          type="text" 
+          placeholder="Пошук" 
+          [(ngModel)]="searchText" 
+          (input)="filterFoods()" 
+          class="search-input"
+        />
+        
+        <div *ngFor="let food of filteredFoodList" class="food-item">
+          <span>{{ food.name }} </span>
+          <button (click)="showFoodDetails(food)">Деталі</button>
+        </div>
+        
+        <div *ngIf="selectedFood" class="food-details">
+          <h2>{{ selectedFood.name }}</h2>
+          <h2>Calorie : {{ selectedFood.calories }}</h2>
+          <h2>Protein : {{ selectedFood.protein }}</h2>
+          <h2>Fat : {{ selectedFood.fat }}</h2>
+          <h2>Carbs : {{ selectedFood.carbs }}</h2>
+          <p>{{ selectedFood.details }}</p>
+          <button class="food-details-button" (click)="closeDetails()">Закрити</button>
+        </div>
+      </div>
+          
+</body>
+</html>

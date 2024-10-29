@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh; /* зафіксити background */
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .globalTitle{
+    color: white;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background: inherit;
+    color: white;
+  }
+
+  .search-input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:#f3f3f3;
+    border-radius: 1px;
+  }
+  
+  .food-item button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .food-details {
+    position: fixed;
+    top: 100px;
+    min-width: 460px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 3px solid #ccc;
+    border-radius: 12px;
+  }  
+  .food-details-button{
+    margin-top: 10px;
+  }
